@@ -20,5 +20,7 @@ from IEapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/foodfilter/<Product>', views.FoodFilter.as_view()),
+    path('api/foodfilter/<Product>/', views.FoodFilter.as_view()),
+    path('api/foodfilter/', views.FoodUpdateDelete.as_view()),
+    path('api/foodfilter/<pk>/', views.FoodUpdateDelete.as_view()),
 ]
